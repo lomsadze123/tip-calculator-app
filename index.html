@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>tip-calculator-app</title>
+</head>
+<body>
+    <div class="box">
+        <img class="center" src="assets/logo.svg" alt="logo">
+        <div class="main">
+            <div class="flex">
+                <h4>Bill</h4>
+                <div class="icons">
+                    <img class="item" src="assets/dollar.svg" alt="dollar">
+                    <input class="input first" type="text" placeholder="0">
+                </div>
+                <h4>Select Tip %</h4>
+                <div id="buttons">
+                    <button value="5">5%</button>
+                    <button value="10">10%</button>
+                    <button value="15">15%</button>
+                    <button value="25">25%</button>
+                    <button value="50">50%</button>
+                    <input type="text" id="custom" placeholder="Custom">
+                </div>
+                <div class="fix">
+                    <h4>Number of People</h4>
+                    <p id="error">Can't be zero</p>
+                </div>
+                <div class="icons">
+                    <img class="item person" src="assets/person.svg" alt="dollar">
+                    <input class="input" type="text" placeholder="0">
+                </div>
+            </div>
+            <div class="calculate">
+                <div class="amount">
+                    <div class="text">
+                        <h3>Tip Amount</h3>
+                        <p>/ person</p>
+                    </div>
+                    <h3 class="total">$0.00</h3>
+                </div>
+                <div class="amount second">
+                    <div class="text">
+                        <h3>Total</h3>
+                        <p>/ person</p>
+                    </div>
+                    <h3 class="total">$0.00</h3>
+                </div>
+                <input id="reset" type="submit" value="RESET">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

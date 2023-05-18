@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h4 , h3 {
+    color: #5E7A7D;
+    font-size: 1.6rem;
+    line-height: 2.37rem;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: #7F9D9F;
+    font-size: 1.3rem;
+    line-height: 1.925rem;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #C5E4E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: white;
+    border-radius: 2.5rem 2.5rem 0 0;
+    padding: 3.2rem 2.4rem;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+}
+
+.center {
+    display: block;
+    margin: 0 auto 4.086rem;
+    width: 8.666rem;
+    height: 5.314rem;
+}
+
+input {
+    border: none;
+    background-color: #F3F9FA;
+    width: 100%;
+    font-size: 2.4rem;
+    line-height: 3.554rem;
+    border-radius: .5rem;
+}
+
+.input {
+    margin: .6rem 0 3.2rem 0;
+    padding: .6rem 1.748rem .6rem 1.926rem;
+    text-align: right;
+}
+
+button {
+    width: 14.663rem;
+    height: 4.8rem;
+    background-color: #00474B;
+    color: white;
+    font-size: 2.4rem;
+    line-height: 3.554rem;
+    border: none;
+    border-radius: .5rem;
+    padding: .6rem 1.755rem .6rem 1.629rem;
+}
+
+#custom {
+    width: 14.781rem;
+    height: 4.8rem;
+    text-align: right;
+    padding: .6rem 1.733rem .6rem 1.9rem;
+    color: #547878;
+}
+
+#custom::placeholder {
+    color: #547878;
+}
+
+.number , #reset , .input {
+    color: #00474B;
+}
+
+.input::placeholder {
+    color: #9EBBBD;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem 1.656rem;
+    margin: 1.6rem 0 3.2rem 0;
+}
+
+.calculate {
+    background-color: #00474B;
+    border-radius: 1.5rem;
+    padding: 3.7rem 2.2rem 2.4rem 2.4rem;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    color: #26C2AE;
+    font-size: 3.2rem;
+    line-height: 4.739rem;
+    letter-spacing: -.067rem;
+}
+
+.second {
+    margin: 2.1rem 0 3.2rem 0;
+}
+
+#reset {
+    background-color: #0D686D;
+    padding: .9rem 3.2rem .9rem 3.3rem;
+    color: rgb(0, 71, 75,0.35);
+}
+
+.icons {
+    position: relative;
+}
+
+.item {
+    width: .984rem;
+    height: 1.546rem;
+    position: absolute;
+    top: 25%;
+    margin-left: 1.926rem;
+}
+
+.person {
+    width: 1.3rem;
+    height: 1.6rem;
+    margin-left: 1.7rem;
+}
+
+input:focus {
+    outline: none;
+    border: .2rem solid #26C2AE;
+}
+
+.fix {
+    display: flex;
+    justify-content: space-between;
+}
+
+#error {
+    font-size: 1.6rem;
+    color: #E17457;
+    display: none;
+}
+
+.active {
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+
+@media (min-width:1100px) {
+    .center {
+        margin-bottom: 8.786rem;
+    }
+    .main {
+        display: flex;
+        border-radius: 2.5rem;
+        gap: 4.8rem;
+        padding: 3.2rem 3.2rem 3.2rem 4.8rem;
+    }
+    .flex {
+        width: 38rem;
+        align-self: center;
+    }
+    .calculate {
+        width: 41.3rem;
+        height: 41.7rem;
+        padding: 4rem;
+    }
+    .second {
+        margin: 2.5rem 0 12.2rem 0;
+    }
+    .amount {
+        align-items: center;
+    }
+    .total {
+        font-size: 4.8rem;
+        line-height: 7.109rem;
+        letter-spacing: -.1rem;
+    }
+    .input {
+        margin: .6rem 0 0 0;
+    }
+    .first {
+        margin-bottom: 4rem;
+    }
+    button {
+        width: 11.7rem;
+        height: 4.8rem;
+        padding: .6rem 1.4rem .6rem 1.3rem;
+        cursor: pointer;
+    }
+    #custom {
+        width: 11.8rem;
+        height: 4.8rem;
+        padding: .6rem 1.5rem .6rem 0;
+    }
+    #buttons {
+        margin-bottom: 4rem;
+        column-gap: 1.4rem;
+    }
+    .person {
+        top: 38%;
+    }
+    #reset {
+        font-size: 2rem;
+        line-height: 2.962rem;
+        cursor: pointer;
+        border: 0;
+    }
+    #reset:hover {
+        background-color: #9FE8DF;
+        color: #00474B;
+    }
+}
