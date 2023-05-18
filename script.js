@@ -9,12 +9,13 @@ const custom = document.getElementById('custom');
 
 function btnchange(event) {
     const target = event.target;
-    if(target.tagName === "BUTTON") {
-        for(let i of button) {
-            i.classList.remove('active');
-        }
-        target.classList.add('active');
+    for (let i of button) {
+      i.classList.remove('active');
     }
+    if (target.tagName === "BUTTON") {
+      target.classList.add('active');
+    }
+
     if(inputs[0].value !== "" && inputs[1].value !== "") {
         let sum = (calc() * +target.value/100) + calc();
         totalAmount[1].textContent = "$" + sum.toFixed(2);
