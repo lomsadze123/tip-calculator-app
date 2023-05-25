@@ -14,6 +14,7 @@ function btnchange(event) {
     }
     if (target.tagName === "BUTTON") {
       target.classList.add('active');
+      custom.value = '';
     }
     calculate();
 };
