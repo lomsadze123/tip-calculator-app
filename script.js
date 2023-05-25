@@ -15,14 +15,32 @@ function btnchange(event) {
     if (target.tagName === "BUTTON") {
       target.classList.add('active');
     }
-
-    if(inputs[0].value !== "" && inputs[1].value !== "") {
-        let sum = (calc() * +target.value/100) + calc();
-        totalAmount[1].textContent = "$" + sum.toFixed(2);
-        totalAmount[0].textContent = "$" + (sum-calc()).toFixed(2);
-    }
-
+    calculate();
 };
+
+function calculate() {
+    if (inputs[0].value !== "" && inputs[1].value !== "") {
+      let sum;
+      const percentageInput = parseFloat(custom.value);
+      if (!isNaN(percentageInput)) {
+        sum = (calc() * percentageInput / 100) + calc();
+      } else {
+        sum = (calc() * +active[0].value / 100) + calc();
+      }
+      totalAmount[1].textContent = "$" + sum.toFixed(2);
+      totalAmount[0].textContent = "$" + (sum - calc()).toFixed(2);
+    }
+    calc();
+  }
+
+custom.addEventListener('input', () => {
+    const value = parseFloat(custom.value);
+    if (!isNaN(value)) {
+      const sum = (calc() * value / 100) + calc();
+      totalAmount[1].textContent = "$" + sum.toFixed(2);
+      totalAmount[0].textContent = "$" + (sum - calc()).toFixed(2);
+    }
+});
 
 function calc() {
     let firstNumber = +inputs[0].value;
@@ -38,8 +56,8 @@ function calc() {
     return firstNumber / secondNumber;
 };
 
-inputs[0].addEventListener('input', calc);
-inputs[1].addEventListener('input', calc);
+inputs[0].addEventListener('input', calculate);
+inputs[1].addEventListener('input', calculate);
 buttons.addEventListener('click', btnchange);
 
 reset.addEventListener("click", () => {
